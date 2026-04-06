@@ -1,0 +1,37 @@
+@UserManagement.Api_HostAddress = http://localhost:5108
+
+GET {{UserManagement.Api_HostAddress}}/api/users
+Accept: application/json
+
+###
+
+POST {{UserManagement.Api_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "role": "Admin"
+}
+
+###
+
+PUT {{UserManagement.Api_HostAddress}}/api/users/{id}
+Content-Type: application/json
+
+{
+  "fullName": "John Doe Updated",
+  "email": "john.doe.updated@example.com",
+  "role": "User",
+  "isActive": true
+}
+
+###
+
+PATCH {{UserManagement.Api_HostAddress}}/api/users/{id}/toggle
+
+###
+
+DELETE {{UserManagement.Api_HostAddress}}/api/users/{id}
+
+###
